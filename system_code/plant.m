@@ -2,7 +2,7 @@ function [dx] = plant(t,x,par)
 % описание моделируемой системы, приведено к системе дифференциальных уравнений первого порядка
 
 zeta = par.a_zeta + (par.b_zeta - par.a_zeta).*rand(1,2);
-%zeta = zeros(1,2);
+% zeta = zeros(1,2);
 
 u = control(t, x, par);
 dx = [x(2);
